@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	    <title>The Foguetin | Menu</title>
+	    <link rel="stylesheet" href="graphics/graphics.css">
+	    <style>
+	    	p#credits{
+	    		position: absolute;
+	    		color: #0f0044;
+	    		font-size: 20px;
+	    		margin-top: 550px;
+	    		margin-left: 15px;
+	    	}
+	    </style>
+	</head>
+	<body>
+		<div id="screen" style="background-image: url('graphics/mainBg.png');">
+			<div id="touchThis">
+				<p id="title">The Foguetin</p>
+				<button id="start">começar</button>
+				<p id="credits">
+					Created by DaniloInfo2.
+					<br>
+					Acesse: <b>thedevsofficial.dx.am</b>
+				</p>
+			</div>
+		</div>
+		<script>
+			window.onload = start();
+
+			function start(){
+
+				let swapColors = true;
+				let ms = 0;
+				let swapVel = 20;
+				let interval = setInterval(anim, swapVel);
+
+				function anim() {
+
+					if(swapColors == true){
+						ms++;
+						//console.log(ms);
+					}
+					if(ms < 10){
+						document.getElementById("title").style.color = "red";
+					}
+					if(ms > 10){
+						document.getElementById("title").style.color = "black";
+					}
+					if(ms == 20){
+						ms = 0;
+					}
+					
+				}
+
+			    document.getElementById("start").onclick = ()=>{
+			        location.replace("play.html");
+			    }
+			}
+		</script>
+		<script>
+			// Your web app's Firebase configuration
+			var firebaseConfig = {
+				apiKey: "AIzaSyDKTpqArCq8BZHHljv5PhGBOU6UGH95BeA",
+			    authDomain: "the-foguetin.firebaseapp.com",
+			    databaseURL: "https://the-foguetin.firebaseio.com",
+			    projectId: "the-foguetin",
+			    storageBucket: "the-foguetin.appspot.com",
+			    messagingSenderId: "618207151132",
+			    appId: "1:618207151132:web:4aa2ae07804f4f81"
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+		</script>
+	</body>
+</html>

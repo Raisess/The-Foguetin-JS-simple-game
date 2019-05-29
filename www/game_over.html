@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <title></title>
+        <style media="screen">
+            body{
+                background-color: #000000;
+                font-family: Arial, sans-serif;
+                margin: 0px;
+            }
+            div#screen{
+                background-color: #000000;
+                border-radius: 0px;
+                display: block;
+                height: 640px;
+                width: 360px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            div#myMsg{
+                position: absolute;
+                font-size: 25;
+                color: #e81017;
+                margin-left: 95px;
+                margin-top: 150px;
+            }
+            div#myBtn{
+                position: absolute;
+                margin-top: 250px;
+                margin-left: 135px;
+            }
+            button#restart{
+                background-color: #215cff;
+                border-color: #215cff;
+                color: #ededed;
+                width: 200px;
+                border-radius: 5px;
+                font-size: 20px;
+                padding: 10px;
+                margin-left: -50px;
+                margin-top: 270px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="screen" style="background-image: url('graphics/gameOver.png');">
+            <div id="myBtn">
+                <button id="restart">Restart</button>
+            </div>
+        </div>
+        <script type="text/javascript">
+            document.getElementById("restart").onclick = ()=>{
+                location.replace("play.html");
+            }
+            document.getElementById("restart").onmouseup = ()=>{
+                document.getElementById("restart").style.backgroundColor = "#d31313";
+                document.getElementById("restart").style.borderColor = "#d31313";
+                document.getElementById("restart").style.color = "#000000";
+            }
+
+            console.log("voce morreu!")
+        </script>
+    </body>
+</html>

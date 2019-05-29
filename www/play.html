@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>The Foguetin</title>
+    <link rel="stylesheet" href="graphics/graphics.css">
+</head>
+<body>
+    <div id="gameScreen" style="background-image: url('graphics/bg.png'); background-repeat: no-repeat;">
+        <div id="game">
+            <div id="points">
+                <p id="pointsNumber"></p>
+            </div>
+            <div id="enemy">
+                <img src="graphics/enemy.png" id="meteor">
+            </div>
+            <div id="player">
+                <img src="graphics/player.png" id="avatar">
+            </div>
+        </div>
+        <div id="controls">
+            <i class="button" id="left"><</i>
+            <i class="button" id="right">></i>
+        </div>
+        <div id="commands">
+            <input type="submit" id="quit" value="QUIT">
+        </div>
+    </div>
+    <script src="code.js"></script>
+</body>
+</html>
